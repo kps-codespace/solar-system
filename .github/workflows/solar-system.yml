@@ -11,7 +11,7 @@ env:
   MONGO_USERNAME: ${{ vars.MANGO_USERNAME }}
   MONGO_PASSWORD: ${{ secrets.MANGO_PASSWORD }}
 
-j obs:
+jobs:
     unit-testing:
         name: unit-testing
         runs-on: ubuntu-latest
