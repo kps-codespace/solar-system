@@ -1,0 +1,25 @@
+name: solar-system-workflow
+
+on:
+    workflow-dispatch:
+    push:
+        branches:
+             - main
+             - 'feature/*'
+
+
+jobs:
+    unit-testing:
+        name: unit-testing
+        runs-on: unbuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+            - name: Setups+-Nodejs version
+              uses: actions/setup-node@v3
+              wiht: 
+                node-version: 22
+            - name: Insgtall dependencies
+              run: npm install
+            - name: Unit testing
+              run: npm test
