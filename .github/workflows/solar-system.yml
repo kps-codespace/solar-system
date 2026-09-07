@@ -8,8 +8,8 @@ on:
              - 'feature/*'
 env:
   MONGO_URI: 'mongodb+srv://supercluster.d3jj.mongodb.net/superData'
-  MONGO_USERNAME: {{ $vars.MANGO_USERNAME }}
-  MONGO_PASSWORD: {{ $secrets.MANGO_PASSWORD }}
+  MONGO_USERNAME: ${{ vars.MANGO_USERNAME }}
+  MONGO_PASSWORD: ${{ secrets.MANGO_PASSWORD }}
 
 j obs:
     unit-testing:
