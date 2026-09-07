@@ -1,0 +1,11 @@
+name: woflow-learn
+
+on: push
+
+jobs:
+    context_github:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Github context
+              run: |
+                   echo ${{tojson(job)}}
