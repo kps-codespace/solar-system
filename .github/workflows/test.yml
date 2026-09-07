@@ -1,6 +1,7 @@
 name: woflow-learn
 
-on: push
+on:
+    wokflow_dispatch:
 
 jobs:
     context_github:
